@@ -1,5 +1,18 @@
 """Pydantic schemas for data validation and API request/response serialization."""
 
+from app.schemas.attendance import (
+    AttendanceAnalytics,
+    AttendanceRecordItem,
+    AttendanceResponse,
+    AttendanceSessionCreate,
+    AttendanceSingleCreate,
+    AttendanceStats,
+    AttendanceStatus,
+    AttendanceUpdate,
+    PaginatedAttendanceResponse,
+    StudentAttendanceSummary,
+    SubjectAttendanceSummary,
+)
 from app.schemas.health import DatabaseHealth, HealthResponse
 from app.schemas.student import (
     PaginatedStudentResponse,
@@ -7,6 +20,16 @@ from app.schemas.student import (
     StudentPrivateDetail,
     StudentResponse,
     StudentUpdate,
+)
+from app.schemas.subject import (
+    AssignLecturerRequest,
+    EnrollStudentRequest,
+    LecturerInfo,
+    PaginatedSubjectResponse,
+    StudentEnrollmentItem,
+    SubjectCreate,
+    SubjectResponse,
+    SubjectUpdate,
 )
 from app.schemas.user import (
     AdminUserCreate,
@@ -31,4 +54,23 @@ __all__ = [
     "StudentResponse",
     "StudentPrivateDetail",
     "PaginatedStudentResponse",
+    "SubjectCreate",
+    "SubjectUpdate",
+    "SubjectResponse",
+    "PaginatedSubjectResponse",
+    "LecturerInfo",
+    "StudentEnrollmentItem",
+    "EnrollStudentRequest",
+    "AssignLecturerRequest",
+    "AttendanceStatus",
+    "AttendanceRecordItem",
+    "AttendanceSessionCreate",
+    "AttendanceSingleCreate",
+    "AttendanceUpdate",
+    "AttendanceResponse",
+    "PaginatedAttendanceResponse",
+    "AttendanceStats",
+    "SubjectAttendanceSummary",
+    "StudentAttendanceSummary",
+    "AttendanceAnalytics",
 ]
