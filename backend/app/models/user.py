@@ -21,6 +21,9 @@ class User(Base, TimestampMixin):
     student: Mapped[Optional["Student"]] = relationship(
         "Student", back_populates="user", uselist=False, cascade="all, delete-orphan"
     )
+    subjects_taught: Mapped[List["Subject"]] = relationship(
+        "Subject", back_populates="lecturer"
+    )
     notifications: Mapped[List["Notification"]] = relationship(
         "Notification", back_populates="user", cascade="all, delete-orphan"
     )

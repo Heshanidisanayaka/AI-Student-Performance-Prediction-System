@@ -6,6 +6,7 @@ have complete visibility into all table metadata.
 from app.db.base_class import Base, TimestampMixin
 from app.models.academic_record import AcademicRecord
 from app.models.attendance import Attendance
+from app.models.enrollment import StudentSubject
 from app.models.notification import Notification
 from app.models.prediction import Prediction
 from app.models.recommendation import Recommendation
@@ -19,6 +20,7 @@ __all__ = [
     "User",
     "Student",
     "Subject",
+    "StudentSubject",
     "Attendance",
     "AcademicRecord",
     "Prediction",

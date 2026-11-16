@@ -37,6 +37,12 @@ class Student(Base, TimestampMixin):
 
     # Relationships
     user: Mapped[Optional["User"]] = relationship("User", back_populates="student")
+    enrollments: Mapped[List["StudentSubject"]] = relationship(
+        "StudentSubject", back_populates="student", cascade="all, delete-orphan"
+    )
+    enrolled_subjects: Mapped[List["Subject"]] = relationship(
+        "Subject", secondary="student_subjects", back_populates="enrolled_students", viewonly=True
+    )
     attendance_records: Mapped[List["Attendance"]] = relationship(
         "Attendance", back_populates="student", cascade="all, delete-orphan"
     )
