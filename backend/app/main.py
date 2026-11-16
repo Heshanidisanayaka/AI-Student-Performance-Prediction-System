@@ -40,6 +40,14 @@ tags_metadata = [
         "description": "Student management with strict role-based and object-level authorization.",
     },
     {
+        "name": "Subjects & Modules",
+        "description": "Subject and curriculum management, lecturer assignments, and student course enrollments.",
+    },
+    {
+        "name": "Attendance Tracking",
+        "description": "Session-based attendance tracking, bulk logging, excused absence policy calculations, and analytics.",
+    },
+    {
         "name": "Health",
         "description": "System health monitoring, diagnostics, and PostgreSQL connectivity checks.",
     },

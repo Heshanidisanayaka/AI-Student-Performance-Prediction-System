@@ -1,5 +1,5 @@
 from fastapi import APIRouter
-from app.api.v1.endpoints import auth, health, students
+from app.api.v1.endpoints import attendance, auth, health, students, subjects
 
 api_router = APIRouter()
 
@@ -11,3 +11,9 @@ api_router.include_router(auth.router, prefix="/auth", tags=["Authentication & U
 
 # Students & Records (with Role & Object-level Authorization)
 api_router.include_router(students.router, prefix="/students", tags=["Students & Records"])
+
+# Subjects & Modules Management (Task 5)
+api_router.include_router(subjects.router, prefix="/subjects", tags=["Subjects & Modules"])
+
+# Attendance Tracking (Task 6)
+api_router.include_router(attendance.router, prefix="/attendance", tags=["Attendance Tracking"])
